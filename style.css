@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #5f5fb7, #795ec1, #965ac9, #b354cc, #d149cb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 340px;
+    background: #ffffff;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(#000, 0.4);
+    transition: 0.2s;
+}
+
+.container.active {
+    background: #292929;
+}
+
+.container form #showAnswer {
+    width: 100%;
+    height: 160px;
+    background: rgb(244, 247, 247);
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.3);
+    text-align: right;
+    font-size: 20px;
+    color: #292929;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.container form #showAnswer.active {
+    background: #292929;
+    color: #ffffff;
+}
+
+.container form .buttons .btn {
+    width: calc(100% / 4 - 4px);
+    height: 50px;
+    margin-top: 10px;
+    background: #c5cccf;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* .container form .buttons .btn.active{
+    background: #dde1e7;
+} */
+
+/* .container form .buttons .btn:hover{
+    background: rgb(113, 156, 173);
+    color: #fff;
+} */
+.container form .buttons .func_btn {
+    /* background: #ff6f91; */
+    background: #3498db;
+    color: #fff;
+}
+
+.container .toggle {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #2c3e50;
+}
+
+.container .toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 20px;
+    border-radius: 10px;
+    background: #efefef;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.container .toggle.active::before {
+    left: 30px;
+}
+
+.container .active_btn {
+    width: 50px;
+    height: 15px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.container .active_btn span {
+    /* position: absolute;
+    top: 35px; */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #eb4a4a;
+}
+
+.container .active_btn span:nth-child(2) {
+    background: orange;
+}
+
+.container .active_btn span:nth-child(3) {
+    background: #16a085;
+}
+
+@media (max-width:380px) {
+    .container {
+        width: 300px;
+    }
+}

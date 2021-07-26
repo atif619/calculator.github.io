@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator Project</title>
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="toggle"></div>
+        <div class="active_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <form action="" name="myCalc">
+            <input type="text" name="showAnswer" id="showAnswer" readonly>
+            <div class="buttons">
+                <input type="button" value="AC" class="btn func_btn" onclick="myCalc.showAnswer.value=''">
+                <input type="button" value="DEL" class="btn func_btn"
+                    onclick="myCalc.showAnswer.value=myCalc.showAnswer.value.substr(0, myCalc.showAnswer.value.length -1)">
+                <input type="button" value="%" class="btn func_btn" onclick="myCalc.showAnswer.value+='%'">
+                <input type="button" value="/" class="btn func_btn" onclick="myCalc.showAnswer.value+='/'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="7" class="btn" onclick="myCalc.showAnswer.value+='7'">
+                <input type="button" value="8" class="btn" onclick="myCalc.showAnswer.value+='8'">
+                <input type="button" value="9" class="btn" onclick="myCalc.showAnswer.value+='9'">
+                <input type="button" value="*" class="btn func_btn" onclick="myCalc.showAnswer.value+='*'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="4" class="btn" onclick="myCalc.showAnswer.value+='4'">
+                <input type="button" value="5" class="btn" onclick="myCalc.showAnswer.value+='5'">
+                <input type="button" value="6" class="btn" onclick="myCalc.showAnswer.value+='6'">
+                <input type="button" value="-" class="btn func_btn" onclick="myCalc.showAnswer.value+='-'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="1" class="btn" onclick="myCalc.showAnswer.value+='1'">
+                <input type="button" value="2" class="btn" onclick="myCalc.showAnswer.value+='2'">
+                <input type="button" value="3" class="btn" onclick="myCalc.showAnswer.value+='3'">
+                <input type="button" value="+" class="btn func_btn" onclick="myCalc.showAnswer.value+='+'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="00" class="btn" onclick="myCalc.showAnswer.value+='00'">
+                <input type="button" value="0" class="btn" onclick="myCalc.showAnswer.value+='0'">
+                <input type="button" value="." class="btn" onclick="myCalc.showAnswer.value+='.'">
+                <input type="button" value="=" class="btn func_btn"
+                    onclick="myCalc.showAnswer.value=eval(myCalc.showAnswer.value)">
+            </div>
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
